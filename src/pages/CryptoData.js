@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import '../App.css';
+import '../css/CryptoData.css';
 import axios from 'axios'
 import Coin from './Coin';
 

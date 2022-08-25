@@ -1,0 +1,26 @@
+*{
+    /* margin:0px;
+    padding:0px; */
+    color:black;
+}
+
+.home-container{
+    display:flex;
+    justify-content:space-between;
+}
+
+.heading{
+    margin-top:11%;
+    font-size:65px;
+    text-align:center;
+    justify-content:center;
+    padding:0px 40px;
+    margin-left:12%;
+}
+
+.mobile-img{
+    text-align:center;
+    justify-content:center;
+    margin-left:8%;
+    margin-top:5px;
+}
