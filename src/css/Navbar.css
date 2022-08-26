@@ -1,3 +1,18 @@
-*{
-    margin-left:10px;
+/* 370px */
+.navbar-brand{
+    font-weight:1000;
+    pointer:cursor;
+    font-size:20px;
+    padding:12px;
 }
+
+li{
+    margin-left:35px;
+}
+
+.sign-in{
+    margin-left:300px;  
+    font-size:25px;
+    padding:2px;
+}
+

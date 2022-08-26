@@ -3,12 +3,8 @@ import '../css/Navbar.css'
 
 const Navbar = (props) => {
 
-  const [mode,setMode]=useState(false);
   const [text,setText]=useState("Enable Dark Mode");
 
-  const onToggle=()=>{
-    setMode(!mode);
-  }
 
   const brand={
     color: "rgb(0, 82, 255)",
@@ -24,7 +20,7 @@ const Navbar = (props) => {
   }
 
   return (
-    <nav className="navbar navbar-expand-lg bg-light" style={myStyle}>
+    <nav className={`navbar navbar-expand-lg  navbar-${props.mode} bg-${props.mode}`} style={myStyle}>
   <div className="container-fluid" style={myStyle}> 
     <a className="navbar-brand" href="/" style={brand}>{props.title}</a>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,15 +47,21 @@ const Navbar = (props) => {
         <li className="nav-item" style={myStyle}>
           <a className="nav-link active" aria-current="page" href="/">Company</a>
         </li>
+
+        <div className="sign-in">
+          <button class="btn btn-light me-md-2" type="submit">Sign in</button>
+          <button class="btn btn-primary" type="submit">Get started</button>
+        </div>
+        
       </ul>
-      <form className="d-flex " role="search">
-        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button className="btn btn-outline-success" type="submit">Search</button>
-      </form>
+      {/* <form className="d-flex " role="search">
+        <input className="form-control " type="search" placeholder="Search" aria-label="Search"/>
+        <button className="btn btn-primary" type="submit">Search</button>
+      </form> */}
 
       <div className="form-check form-switch">
-  <input className="form-check-input mx-3" type="checkbox" role="switch" id="flexSwitchCheckDefault"   onChange={onToggle}/>
-  <label className="form-check-label" htmlFor="flexSwitchCheckDefault" style={myStyle}>{mode?"Enable Light Mode":"Enable Dark Mode"}</label>
+  <input className="form-check-input mx-3" type="checkbox" role="switch" id="flexSwitchCheckDefault"   onClick={props.onSlide}/>
+  {/* <label className={`form-check-label text-${props.mode==="dark"?"light":"dark"}`} htmlFor="flexSwitchCheckDefault" style={myStyle}>{props.mode==='dark'?"Enable Light Mode":"Enable Dark Mode"}</label> */}
 </div>
     </div>
   </div>
