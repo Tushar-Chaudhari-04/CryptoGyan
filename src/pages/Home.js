@@ -1,20 +1,37 @@
 import React,{useState} from 'react'
 import mobileImage from '../images/Mobile Image.PNG'
+import bitcoinImage from '../images/bitcoin.png'
+import rightArrow from '../images/right-arrow.png'
 import '../css/Home.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro' // <-- import styles to be used
+
 
 const Home = () => {
 
   return (
     <div className="home-container">
         <div className="main-text">
-          <sapn>
-          <FontAwesomeIcon icon="fa-brands fa-btc" /><p>Jump start your portfolio</p>
-          </sapn>
+          <span className="title">
+          <img className="bitcoin" src={bitcoinImage}/>
+           Jump start your portfolio
+           <img className="right-arrow" src={rightArrow}/>
+          </span>
           <h3 className="heading">Jump start your crypto portfolio</h3>
+          <p className="heading-desc">Coinbase is the easiest place to buy and sell cryptocurrency.
+          Sign up and get started today.</p>
+
+          <form className="email">
+            <div className="col-auto">
+            <input type="email" className="form-control" id="inputEmail" placeholder="Email Address"/>
+            </div>
+            <div className="col-auto">
+              <button type="submit" className="btn btn-primary mb-3">Get Started</button>
+            </div>
+         </form>
         </div>
         <img className="mobile-img" src={mobileImage} alt="MobileImage"/>
-        
+       
     </div>
   )
 }

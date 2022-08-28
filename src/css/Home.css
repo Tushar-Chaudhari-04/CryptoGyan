@@ -20,6 +20,15 @@
     margin-left:100px;
 }
 
+.title{
+    /* margin-top: var(--spacing-1);
+    margin-bottom: var(--spacing-2); */
+    margin-left:80px;
+    color: rgb(0, 82, 255);
+    font-weight:500;
+    display:flex;
+}
+
 .heading{
     font-size: 62px;
     font-weight: 500;
@@ -37,4 +46,38 @@
     margin-top:3.5%; */
     margin-top:50px;
     margin-left:0.1%;
+}
+
+.bitcoin{
+    height:28px;
+    margin-right:10px;
+}
+
+.right-arrow{
+    height:30px;
+    margin-left:10px;
+    width:27px;
+    color: rgb(0, 82, 255);
+}
+
+.heading-desc{
+    /* margin-left:15px; */
+    margin-top:15px;
+    font-size:28px;
+    line-height:1.4;
+    margin-right:60px;
+}
+
+.email{
+    display:flex;
+    align-item:center;
+    justify-content:space-between;
+    padding:20px;
+    font-size:30px;
+    font-weight:500;
+    flex-direction:row;
+}
+
+.btn{
+    margin-left:20px;
 }
