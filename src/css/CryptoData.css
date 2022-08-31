@@ -1,7 +1,22 @@
 
+.coin-app{
+  margin-left:8%;
+  padding:20px;
+  width:150%;
+}
 
+.table{
+  align-items:center;
+  justify-content:space-between;
+  margin-left:40%;
+  display:flex;
+  flex-direction:row;
+}
 
-
+.th{
+  margin:0 10px;
+  weight:10px;
+}
 
 
 

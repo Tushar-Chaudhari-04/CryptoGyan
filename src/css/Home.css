@@ -31,7 +31,7 @@
 }
 
 .heading{
-    font-size: 62px;
+    font-size: 60px;
     font-weight: 500;
     line-height: 1.15;
     margin-top: var(--spacing-1);
@@ -46,6 +46,7 @@
     /* margin-left:52.8%;
     margin-top:3.5%; */
     margin-left:0.1%;
+    height:40%;
 }
 
 .bitcoin{
@@ -61,41 +62,44 @@
 }
 
 .heading-desc{
-    margin-left:10px;
-    margin-top:15px;
+    /* margin-left:10px; */
+    margin-top:5px;
     font-size:30px;
     line-height:1.4;
-    margin-right:45px;
+    margin-right:210px;
     padding:10px;
 }
 
-.email{
-    position:absolute;
+.email-form{
     display:flex;
-    flex-direction:row;
+    margin-left:32px;
+}
+
+.email{
     align-item:center;
     justify-content:space-between;
     font-size:18px;
-    font-weight:300;
-    margin-left:25px;
+    font-weight:600;
     padding:5px;
     border-radius:3px;
-    width:18%;
+    width:150%;
+    padding:20px;
     height:10vh;
-    border:1px solid transparent;
+    border:2px solid transparent;
+    font-weight:400;
 }
 
 .email-btn{
-    position:relative;
-    margin-left:100%;
+    margin-left:40%;
     /* flex-direction:row; */
     align-item:center;
     font-size:16px;
     font-weight:300;
     padding:5px;
     border-radius:4px;
-    width:130%;
+    width:100%;
     height:10vh;
+    padding:10px;
     border:3px solid transparent;
 }
 

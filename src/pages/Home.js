@@ -27,12 +27,10 @@ const Home = () => {
           <p className="heading-desc">Coinbase is the easiest place to buy and sell cryptocurrency.
           Sign up and get started today.</p>
 
-          <form >
-            <div className="col-auto">
-            <input type="email" className="form-control my-3 email" id="inputEmail" placeholder="Email Address"/>
-            </div>
-            <div className="col-auto">
-              <button type="submit" className="btn btn-primary my-3 email-btn">Get Started</button>
+          <form className="">
+            <div className="email-form">
+             <input type="email" className="form-control my-3 email" id="inputEmail" placeholder="Email Address"/>
+             <button type="submit" className="btn btn-primary my-3 email-btn">Get Started</button>
             </div>
          </form>
         </div>

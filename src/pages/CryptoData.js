@@ -6,7 +6,10 @@ import Coin from './Coin';
 
 const Home = () => {
   const [coins,setCoins]=useState([]);
+//   const [filterCoins,setFilterCoins]=useState([]);
   const [search,setSearch]=useState("");
+//   const [count,setCount]=useState(0);
+//   const cryptoCoins=["Bitcoin","Ethereum","Cardano","Solana"];
   
   useEffect(()=>{
     axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=INR&order=market_cap_desc&per_page=100&page=1&sparkline=false')
@@ -21,31 +24,43 @@ const Home = () => {
     )
   },[]);
 
+
+  const filterCoins=coins.filter((value)=>{
+        if(value.name==="Bitcoin" || value.name==="Ethereum" || value.name==="Cardano" || value.name==="Solana"){
+            return value;
+        }
+    });
+
+const tableHeader=["Name","Price","Change","Market Cap","Trade"];
+
   return (
     <div className='coin-app'>
-        <div className='coin-search'>
-            <form>
-                <input type="text" placeholder='Enter Crypto Name'/>
-            </form>
-        </div>
-
-            {coins.map(coin=>{
+       <table>
+        <thead>
+            <tr>
+                {tableHeader.map(head=>
+                    <td>{head}</td>
+                    )}
+            </tr>
+           
+        </thead>
+        <tbody>
+        {filterCoins.map(coin=>{
                 return (
-                    <div>
                     <Coin 
                         key={coin.id}
                         image={coin.image}
                         symbol={coin.symbol}
                         name={coin.name}
                         price={coin.current_price}
-                        volume={coin.total_volume}
+                        // volume={coin.total_volume}
                         pricechange={coin.price_change_24h}
                         marketcap={coin.market_cap}
                     />
-                    <br></br>
-                    </div>
                 )})
             };
+        </tbody>
+       </table>
     </div>
   )
 }
@@ -54,7 +69,11 @@ export default Home
 
 
 
-
+{/* <div className='coin-search'>
+<form>
+    <input type="text" placeholder='Enter Crypto Name'/>
+</form>
+</div> */}
 
 
 

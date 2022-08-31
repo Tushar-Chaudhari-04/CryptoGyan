@@ -16,7 +16,7 @@ function App() {
     <div className="App">
       <Navbar title="CryptoGyan" mode={mode} onSlide={onSlide}/>
       <Home mode={mode} onSlide={onSlide}/>
-      {/* <CryptoData/> */}
+      <CryptoData/>
       <Footer/>
     </div>
   );

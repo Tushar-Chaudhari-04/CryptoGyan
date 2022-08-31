@@ -5,8 +5,9 @@
 }
 
 .coin-container{
-    display: flex;
-    justify-content: center;
+    /* display: flex;
+    justify-content:space-between; */
+
 }
 .coin-row{
     display: flex;
