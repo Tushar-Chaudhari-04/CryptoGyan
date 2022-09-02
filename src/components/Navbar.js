@@ -1,5 +1,11 @@
 import React, { useState } from 'react'
 import '../css/Navbar.css'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 const Navbar = (props) => {
 
@@ -29,7 +35,7 @@ const Navbar = (props) => {
     <div className="collapse navbar-collapse" id="navbarSupportedContent" style={myStyle}>
       <ul className="navbar-nav me-auto mb-2 mb-lg-0" style={myStyle}>
         <li className="nav-item" style={myStyle}>
-          <a className="nav-link active" aria-current="page" href="/">Explore</a>
+          <a className="nav-link active" aria-current="page" href="/portfolio">Explore</a>
         </li>
        
         <li className="nav-item" style={myStyle}>

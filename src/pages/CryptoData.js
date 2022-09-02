@@ -35,14 +35,13 @@ const tableHeader=["Name","Price","Change","Market Cap","Trade"];
 
   return (
     <div className='coin-app'>
-       <table>
+    <table>
         <thead>
             <tr>
-                {tableHeader.map(head=>
-                    <td>{head}</td>
-                    )}
+            {tableHeader.map(data=>{
+                {<th>{data}</th>}
+            })}
             </tr>
-           
         </thead>
         <tbody>
         {filterCoins.map(coin=>{
@@ -60,7 +59,7 @@ const tableHeader=["Name","Price","Change","Market Cap","Trade"];
                 )})
             };
         </tbody>
-       </table>
+        </table>
     </div>
   )
 }

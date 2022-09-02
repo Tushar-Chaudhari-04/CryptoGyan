@@ -24,7 +24,6 @@ const Coin = ({image,symbol,name,price,volume,pricechange,marketcap}) => {
                 </div>
                 
             </div>
-            
         </tr>
     )
 }

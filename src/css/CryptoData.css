@@ -1,48 +1,53 @@
 
+
+
+
+
+
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+
+
 .coin-app{
-  margin-left:8%;
+  margin-left:0%;
   padding:20px;
-  width:150%;
+  width:200vh;
+  height:100vh;
 }
 
 .table{
   align-items:center;
   justify-content:space-between;
-  margin-left:40%;
+  margin-left:20%;
   display:flex;
   flex-direction:row;
+  border:2px solid transparent;
 }
+
 
 .th{
-  margin:0 10px;
-  weight:10px;
-}
+  /* margin:0 10px;
+  weight:10px; */
+  align-items:space-between;
+} 
 
-
-
-
-
-
-
-
-
-
-
-
-/* @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
-
-
-*{
+/**{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: 'Josefin Sans', sans-serif;
-  // font-family: 'Bree Serif', serif; 
-  // background-image: linear-gradient(to top, #f43b47 0%, #453a94 100%); 
+  font-family: 'Bree Serif', serif; 
+  background-image: linear-gradient(to top, #f43b47 0%, #453a94 100%); 
   color: black;
   background-color: #21209C;
 
-}
+}*/
 .coin-app{
   display: flex;
   flex-direction: column;
@@ -68,9 +73,9 @@
   border-radius: 4px;
   border: none;
   background-image: linear-gradient(to right, #3ab5b0 0%, #3d99be 31%, #56317a 100%);
-  // background-image: linear-gradient(to top, #fcc5e4 0%, #fda34b 15%, #ff7882 35%, #c8699e 52%, #7046aa 71%, #0c1db8 87%, #020f75 100%); 
+   background-image: linear-gradient(to top, #fcc5e4 0%, #fda34b 15%, #ff7882 35%, #c8699e 52%, #7046aa 71%, #0c1db8 87%, #020f75 100%); 
 color: #e2e2e2;
 }
 .coin-input::placeholder{
   color: #e2e2e2;
-} */
+}

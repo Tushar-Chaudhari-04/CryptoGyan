@@ -5,6 +5,14 @@ import CryptoData from './pages/CryptoData';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
+import Portfolio from './pages/Portfolio';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,Routes
+} from "react-router-dom";
+
 
 function App() {
   const [mode,setMode]=useState('light');
@@ -15,10 +23,13 @@ function App() {
   return (
     <div className="App">
       <Navbar title="CryptoGyan" mode={mode} onSlide={onSlide}/>
-      <Home mode={mode} onSlide={onSlide}/>
-      <CryptoData/>
-      <Footer/>
+        <Home mode={mode} onSlide={onSlide}/>
+         {/* <CryptoData/> */}
+        <Portfolio />
+      {/* <Footer/> */}
+     
     </div>
+    
   );
 }
 

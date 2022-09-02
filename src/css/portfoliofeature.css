@@ -1,0 +1,22 @@
+.features{
+    display:flex;
+    flex:1;
+    /* justify-content:space-between; */
+  }
+
+.feature-img{
+    float:left;
+}
+
+.feature-title{
+    font-size:100px;
+    font-weight:1000;
+}
+
+.feature-info{
+}
+
+.feature-data{
+    width:200px;
+    margin-left:95%;
+}
