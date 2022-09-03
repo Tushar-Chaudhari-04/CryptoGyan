@@ -6,6 +6,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import Portfolio from './pages/Portfolio';
+import MiddlePage from './pages/MiddlePage'
 import {
   BrowserRouter as Router,
   Switch,
@@ -26,6 +27,8 @@ function App() {
         <Home mode={mode} onSlide={onSlide}/>
          {/* <CryptoData/> */}
         <Portfolio />
+        {/* <div className="space"></div> */}
+        <MiddlePage/>
       {/* <Footer/> */}
      
     </div>

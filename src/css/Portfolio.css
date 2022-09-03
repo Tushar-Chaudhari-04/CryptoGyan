@@ -3,11 +3,11 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  background-color:#ffff;
+  /* background-color:#ffff; */
 }
 
 .portfolio-page {
-  margin-top: 10%;
+  margin-top: 8%;
   width:95%;
 }
 
@@ -37,10 +37,12 @@
 }
 
 .portfolio-features{
-  z-index:0;
+  /* z-index:0; */
   margin-top:5%;
   margin-left:4%;
   width:35%;
   display:flex;
   flex-direction:column;
+  /* justify-content:space-between;
+  margin:0 50px; */
 }

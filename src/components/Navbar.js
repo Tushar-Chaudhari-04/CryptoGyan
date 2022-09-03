@@ -65,10 +65,10 @@ const Navbar = (props) => {
         <button className="btn btn-primary" type="submit">Search</button>
       </form> */}
 
-      <div className="form-check form-switch">
+      {/* <div className="form-check form-switch">
   <input className="form-check-input mx-3" type="checkbox" role="switch" id="flexSwitchCheckDefault"   onClick={props.onSlide}/>
-  {/* <label className={`form-check-label text-${props.mode==="dark"?"light":"dark"}`} htmlFor="flexSwitchCheckDefault" style={myStyle}>{props.mode==='dark'?"Enable Light Mode":"Enable Dark Mode"}</label> */}
-</div>
+  <label className={`form-check-label text-${props.mode==="dark"?"light":"dark"}`} htmlFor="flexSwitchCheckDefault" style={myStyle}>{props.mode==='dark'?"Enable Light Mode":"Enable Dark Mode"}</label>
+</div> */}
     </div>
   </div>
 

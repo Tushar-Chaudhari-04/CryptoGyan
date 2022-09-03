@@ -1,4 +1,10 @@
 *{
     color:"black";
-    backGroundColor:"black"
+    backGroundColor:"white"
 }
+
+.space{
+    width:100px;
+    height:200px;
+}
+

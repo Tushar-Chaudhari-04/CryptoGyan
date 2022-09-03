@@ -1,4 +1,8 @@
 /* 370px */
+.container-fluid{
+    position:sticky;
+}
+
 .navbar-brand{
     font-weight:1000;
     pointer:cursor;

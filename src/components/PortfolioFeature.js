@@ -5,8 +5,9 @@ const PortfolioFeature = (props) => {
     <div className="features">
         <img className="feature-img" src={props.img} alt="feature-img"/>
         <div className="feature-data">
-                <p className="feature-title">{props.title}</p>
-                <p className="feature-info">{props.info}</p>
+                <h4 className="feature-title">{props.title}</h4>
+                <br/>
+                <span className="feature-info">{props.info}</span>
         </div>
     </div>
   )
