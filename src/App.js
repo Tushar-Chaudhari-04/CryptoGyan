@@ -29,7 +29,7 @@ function App() {
         <Portfolio />
         {/* <div className="space"></div> */}
         <MiddlePage/>
-      {/* <Footer/> */}
+      <Footer/>
      
     </div>
     

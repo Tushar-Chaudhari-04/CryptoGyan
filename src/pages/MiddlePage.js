@@ -70,6 +70,3 @@ const MiddlePage = () => {
 
 export default MiddlePage
 
-// ₹44,00,000 Cr
-// 100+
-// 8.9+ Cr

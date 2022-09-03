@@ -22,13 +22,13 @@
     flex-direction:row;
     margin-top:5%;
     margin-left:12%;
-  
   }
 
   .feature-info1{
     width:28%;
     text-align:center;
     justify-content:space-between;
+    text-decoration:none;
   }
 
   .feature-info2{
@@ -36,12 +36,13 @@
     text-align:center;
     justify-content:space-between;
     margin-left:30%;
+    text-decoration:none;
   }
 
   .data{
     margin-top:15%;
     width:100%;
-    padding:50px;
+    padding:100px;
     /* margin-left:30%; */
     text-align:center;
     /* justify-content:space-between; */
