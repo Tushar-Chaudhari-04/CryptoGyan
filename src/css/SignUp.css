@@ -1,13 +1,29 @@
+.signup-header{
+    display:flex;
+    justify-content:space-between;
+    height:50px;
+    /* align-item:center; */
+}
 
 .signup-main{
     display:flex;
+}
 
+.signup-space{
+    width:6%;
+}
+
+.leftArrowImage{
+    /* width:15%; */
+    height:15%;
+    /* margin-top:1%; */
+    /* margin-left:100px; */
 }
 
 .signup{
     width:34%;
-    margin-top:8%;
-    margin-left:15%;
+    margin-top:3%;
+    margin-left:10%;
 
 }
 
@@ -40,8 +56,10 @@ input{
 }
 
 .signup-heading{
+    font-size:40px;
     margin-bottom:30px;
     font-weight:450;
+    margin-left:-80px;
 }
 
 .signup-lastpara{
@@ -52,7 +70,21 @@ input{
 }
 
 .signup-rightside{
-    width:34%;
-    margin-top:8%;
-    margin-left:10%;
+    width:45%;
+    margin-top:3%;
+    margin-left:15%;
+}
+
+.signup-rightside-head{
+    width:65%;
+    text-align:center;
+    padding:5px;
+    font-size:50px;
+}
+
+.signup-rightside-desc{
+    width:80%;
+    text-align:left;
+    color:black;
+    font-weight:350;
 }

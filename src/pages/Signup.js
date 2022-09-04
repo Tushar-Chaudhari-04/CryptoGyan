@@ -1,6 +1,9 @@
 import React from 'react';
 import "../css/SignUp.css";
 import signupImage from "../images/signup-sideImage.PNG";
+import faArrowAltCircleLeft from "@fortawesome/free-regular-svg-icons";
+import leftArrow from "../images/left arrow.PNG";
+import redirectHome from "../images/redirectHome.PNG";
 
 const SignUp = () => {
 
@@ -12,9 +15,18 @@ const SignUp = () => {
     }
 
   return (
+    <div>
+    <div className="signup-header">
+        <img style={{marginLeft:"10px",marginTop:"5px",height:"55px"}} src={redirectHome} />
+        <p style={{marginRight:"30px",marginTop:"20px"}}>Sign In</p>
+    </div>
+    <hr/>
     <div className="signup-main">
+    <div className="signup-space">
+
+    </div>
     <div className="signup">
-    <h1 className="signup-heading">Create an account</h1>
+    <h3 className="signup-heading"> <span><img className="leftArrowImage" src={leftArrow} alt="left-arrow"/>Create an account</span></h3>
     <p>Required fields have an asterisk: *</p>
     <form style={SignUpStyle}>
         <div className="row">
@@ -59,9 +71,10 @@ const SignUp = () => {
     </div>
 
     <div className="signup-rightside">
-        <h1> Do more with crypto, only on Coinbase</h1>
-        <p>Set up your account and verify your photo ID to get started on trading crypto.</p>
+        <h1 className="signup-rightside-head"> Do more with crypto, only on Coinbase</h1>
+        <p className="signup-rightside-desc">Set up your account and verify your photo ID to get started on trading crypto.</p>
         <img src={signupImage} alt="SignUpSideImage"/>            
+    </div>
     </div>
     </div>
   )
