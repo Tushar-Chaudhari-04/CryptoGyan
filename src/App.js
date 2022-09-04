@@ -7,12 +7,14 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Portfolio from './pages/Portfolio';
 import MiddlePage from './pages/MiddlePage'
+import SignUp from "./pages/Signup"
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Link,Routes
 } from "react-router-dom";
+
 
 
 function App() {
@@ -23,6 +25,7 @@ function App() {
   }
   return (
     <div className="App">
+      <SignUp/>
       <Navbar title="CryptoGyan" mode={mode} onSlide={onSlide}/>
         <Home mode={mode} onSlide={onSlide}/>
          {/* <CryptoData/> */}

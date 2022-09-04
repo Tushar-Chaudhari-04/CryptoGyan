@@ -1,5 +1,6 @@
 import React from 'react';
 import "../css/Footer.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Footer = () => {
   const currentYear=new Date().getFullYear(); //get Current Year
@@ -12,6 +13,7 @@ const Footer = () => {
       <div className="newsletter">
         <form className="col-6 col-md-12 md-4 mx-5">
         <input type="email" className="form-control my-3 mx-5 footer-email" id="inputEmail" placeholder="Email Address"/>
+        <span><FontAwesomeIcon icon="fa-solid fa-paper-plane-top" /></span>
         {/* <button type="submit" className="btn btn-primary my-3 footer-btn">Subscribe</button> */}
         </form>
       </div>
@@ -61,7 +63,10 @@ const Footer = () => {
             <li>Status</li>
           </ul>
       </div>
-
+      <div className="space-btw">
+      <div className="space-height"></div>
+      <br/>
+      </div>
       <div className="col-6 col-md-2 md-3 ">
           <h5>Learn</h5>
           <ul>
