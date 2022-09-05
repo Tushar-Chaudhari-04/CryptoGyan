@@ -10,6 +10,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Portfolio from './Portfolio';
 import MiddlePage from "../pages/MiddlePage";
+import CryptoData from "../pages/CryptoData";
 
 const Home = () => {
   // props.mode==="dark"?"black":"white"
@@ -45,6 +46,7 @@ const Home = () => {
         <img className="mobile-img" src={mobileImage} alt="MobileImage"/>
        
     </div>
+    {/* <CryptoData/> */}
     <Portfolio />
     <MiddlePage/>
     <Footer/>

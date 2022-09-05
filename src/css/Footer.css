@@ -36,6 +36,7 @@ ul,li{
 
 .foot-note{
     margin-top:5%;
+  
 }
 
 .space-btw{
@@ -43,5 +44,9 @@ ul,li{
 }
 
 .space-height{
-    height:40%;
+    height:70%;
+}
+
+.footer-icon{
+    color:#0667d0;
 }
