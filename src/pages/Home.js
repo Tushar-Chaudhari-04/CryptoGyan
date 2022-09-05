@@ -6,7 +6,10 @@ import rightArrow from '../images/right-arrow.png'
 import '../css/Home.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro' // <-- import styles to be used
-
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import Portfolio from './Portfolio';
+import MiddlePage from "../pages/MiddlePage";
 
 const Home = () => {
   // props.mode==="dark"?"black":"white"
@@ -15,7 +18,12 @@ const Home = () => {
   //   backgroundColor:props.mode==="dark"?"black":"white",
   //   color:props.mode==="dark"?"#ffff":"black",
   // }
+
+  // mode={mode} onSlide={onSlide}
   return (
+    <div >
+    <Navbar title="CryptoGyan"/>
+   
     <div className="home-container" >
         <div className="main-text">
           <span className="title">
@@ -36,6 +44,10 @@ const Home = () => {
         </div>
         <img className="mobile-img" src={mobileImage} alt="MobileImage"/>
        
+    </div>
+    <Portfolio />
+    <MiddlePage/>
+    <Footer/>
     </div>
   )
 }

@@ -8,16 +8,18 @@ import Home from './pages/Home';
 import Portfolio from './pages/Portfolio';
 import MiddlePage from './pages/MiddlePage'
 import SignUp from "./pages/Signup"
+import Signin from "./pages/Signin"
 import {
   BrowserRouter as Router,
-  Switch,
   Route,
-  Link,Routes
+  Routes,
+  Navigate
 } from "react-router-dom";
 
 
-
 function App() {
+  const user=false;
+
   const [mode,setMode]=useState('light');
 
   const onSlide=()=>{
@@ -25,17 +27,20 @@ function App() {
   }
   return (
     <div className="App">
-      <SignUp/>
-      <Navbar title="CryptoGyan" mode={mode} onSlide={onSlide}/>
-        <Home mode={mode} onSlide={onSlide}/>
-         {/* <CryptoData/> */}
-        <Portfolio />
-        {/* <div className="space"></div> */}
-        <MiddlePage/>
-      <Footer/>
-     
+     <Router>
+      <Routes>
+            <Route exact path="/" element={<Home mode={mode} onSlide={onSlide}/>}/>
+            <Route path="/register" element={user?<Navigate to="/"/>:<SignUp/>}/> 
+            <Route path="/login" element={user?<Navigate to="/"/>:<Signin/>}/>
+            {/* <Route path="/products/:category" element={</>}/>
+            <Route path="/product/:id" element={<SpecificProduct/>}/>
+            <Route path="/cart" element={<Cart/>}/>
+            <Route path="/payment" element={<Payment/>}/>
+            <Route path="/success" element={<Success/>}/> */}
+     </Routes>
+    </Router>
+    {/* <CryptoData/> */}
     </div>
-    
   );
 }
 

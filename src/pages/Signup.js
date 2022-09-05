@@ -4,6 +4,13 @@ import signupImage from "../images/signup-sideImage.PNG";
 import faArrowAltCircleLeft from "@fortawesome/free-regular-svg-icons";
 import leftArrow from "../images/left arrow.PNG";
 import redirectHome from "../images/redirectHome.PNG";
+import {
+    BrowserRouter as Router,
+    Route,
+    Routes,
+    Navigate,
+    Link
+  } from "react-router-dom";
 
 const SignUp = () => {
 
@@ -17,8 +24,8 @@ const SignUp = () => {
   return (
     <div>
     <div className="signup-header">
-        <img style={{marginLeft:"10px",marginTop:"5px",height:"55px"}} src={redirectHome} />
-        <p style={{marginRight:"30px",marginTop:"20px"}}>Sign In</p>
+        <Link to="/"><img style={{marginLeft:"10px",marginTop:"5px",height:"55px"}} src={redirectHome} /></Link>
+        <Link to="/login"><p style={{marginRight:"30px",marginTop:"20px",textDecorationLine:"none"}}>Sign In</p></Link>
     </div>
     <hr/>
     <div className="signup-main">

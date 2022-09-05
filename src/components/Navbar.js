@@ -55,8 +55,8 @@ const Navbar = (props) => {
         </li>
 
         <div className="sign-in">
-          <button class="btn btn-light me-md-2" type="submit">Sign in</button>
-          <button class="btn btn-primary" type="submit">Get started</button>
+        <Link to="/login"><button class="btn btn-light me-md-2" type="submit">Sign in</button></Link>
+          <Link to="/register"><button class="btn btn-primary" type="submit">Get started</button></Link>
         </div>
         
       </ul>
