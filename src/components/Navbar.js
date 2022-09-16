@@ -9,7 +9,7 @@ import {
 
 const Navbar = (props) => {
 
-  const [text,setText]=useState("Enable Dark Mode");
+  //const [text,setText]=useState("Enable Dark Mode");
 
 
   const brand={

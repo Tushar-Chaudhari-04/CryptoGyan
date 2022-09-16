@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
+// import {useHistory} from 'react-router-dom';
+import axios from 'axios';
 import "../css/SignUp.css";
 import signupImage from "../images/signup-sideImage.PNG";
 import faArrowAltCircleLeft from "@fortawesome/free-regular-svg-icons";
@@ -6,13 +8,59 @@ import leftArrow from "../images/left arrow.PNG";
 import redirectHome from "../images/redirectHome.PNG";
 import {
     BrowserRouter as Router,
+    Switch,
     Route,
-    Routes,
-    Navigate,
     Link
   } from "react-router-dom";
 
 const SignUp = () => {
+   // const history=useHistory();
+    const url="http://localhost:3000/crypto/auth/register"
+    const [data,setData]=useState({
+        firstName:"",
+        lastName:"",
+        email:"",
+        password:""
+    });
+    
+    const [valid,setValid]=useState(true);
+    let name,value;
+    
+
+    const handleData=(e)=>{
+        console.log(e.target.value)
+        name=e.target.id;
+        value=e.target.value;
+        console.log(name,value);
+        setData({
+            ...data,[name]:value
+        });
+        // const newData=[...data];
+        // newData[e.target.id]=e.target.value;
+        // setData(newData);
+        // console.log(data);
+    }
+
+    const submitData=(e)=>{
+        e.preventDefault();
+
+        axios.post(url,{
+            firstName:data.firstName,
+            lastName:data.lastName,
+            email:data.email,
+            password:data.password
+        }).then(res=>{
+            console.log(res);
+            if(res.request.status===201){
+                console.log("User Register Successfully");
+                setValid(true);
+               
+                //history.push("/login");
+            }
+        }).catch(err=>{
+            console.log(err);
+        })
+    }
 
     const SignUpStyle={
         width:"100%",
@@ -35,31 +83,39 @@ const SignUp = () => {
     <div className="signup">
     <h3 className="signup-heading"> <span><img className="leftArrowImage" src={leftArrow} alt="left-arrow"/>Create an account</span></h3>
     <p>Required fields have an asterisk: *</p>
-    <form style={SignUpStyle}>
+    <form style={SignUpStyle} method="POST">
         <div className="row">
             <div className="col-md-6">
                 <label htmlFor="firstName">First name*</label>
-                <input type="text" className="form-control" id="firstName" placeholder="First Name"/>
+                <input   type="text"  className="form-control" id="firstName" placeholder="First Name" autoComplete='off'
+                 value={data.firstName} onChange={handleData} 
+                />
             </div>
 
             <div className="col-md-6">
                 <label htmlFor="lastName">Last name*</label>
-                <input type="text" className="form-control" id="lastName" placeholder="Last Name"/>
+                <input type="text" className="form-control" id="lastName" placeholder="Last Name" autoComplete='off'
+                    value={data.lastName} onChange={handleData} 
+                />
             </div>
 
             <div>
                 <label htmlFor="email">Email*</label>
-                <input type="email" className="form-control" id="email" placeholder="Email"/>
+                <input  type="email" className="form-control" id="email" placeholder="Email" autoComplete='off'
+                    value={data.email} onChange={handleData} 
+                />
             </div>
 
             <div>
                 <label htmlFor="password">Password*</label>
-                <input type="password" className="form-control" id="password" placeholder="Minimum 8 Characters"/>
+                <input type="password" className="form-control" id="password" placeholder="Minimum 8 Characters" autoComplete='off'
+                    value={data.password} onChange={handleData} 
+                />
             </div>
 
             <div class="col-md-12">
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required />
+                    {/* <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required /> */}
                     <span>
                         I certify that I am 18 years of age or older, I agree to the <a className="user-agreement">User Agreement</a>, and I have read the <a className="user-agreement">Privacy Policy</a>.
                     </span>
@@ -72,7 +128,7 @@ const SignUp = () => {
                 </div>
             </div>
         </div>
-        <button type="button" className="btn btn-primary btn-lg signup-btn" >Create a free Account</button>
+        <Link to={valid?"/login":"/register"}><button type="button" className="btn btn-primary btn-lg signup-btn" onClick={submitData}>Create a free Account</button></Link>
         <p className="signup-lastpara"><a className="user-agreement">Sign up</a> for a business account</p>
     </form>
     </div>

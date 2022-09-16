@@ -15,19 +15,7 @@ ul,li{
     /* text-align:center; */
 }
 
-.newsletter{
-    display:flex;
-    flex-direction:row;
-    justify-content:center;
-    margin-left:30%;
-}
 
-.footer-email{
-    margin-left:30%;
-    border:2px solid transparent;
-    width:50%;
-    padding:15px;
-}
 
 .footer-btn{
     padding:20px;
@@ -50,3 +38,4 @@ ul,li{
 .footer-icon{
     color:#0667d0;
 }
+

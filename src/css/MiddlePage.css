@@ -1,3 +1,4 @@
+
 .middle{
     width:100%;
     margin-top:23%;
@@ -59,11 +60,17 @@
     background-color:yellow;
     color:white;
     border-collapse: collapse;
+    /* backgroundColor:rgb(0, 82, 255); */
   }
 
-  tr,th,td{
-    background-color:rgb(0, 82, 255);
+  /* tr,th,td{
     color:white;
+    background-color:rgb(0, 82, 255);
+  } */
+
+  .data-bg{
+    color:white;
+    background-color:rgb(0, 82, 255);
   }
 
   th{
@@ -98,3 +105,26 @@
     padding:40px;
     text-align:center;
   }
+
+  .middle-newsletter{
+    text-align:center;
+  }
+
+  .newsletter{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    margin-left:30%;
+}
+
+.footer-email{
+    margin-left:30%;
+    border:2px solid transparent;
+    width:50%;
+    padding:15px;
+}
+
+.footer-em{
+  display:flex;
+  flex-direction:row;
+}

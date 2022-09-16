@@ -35,9 +35,9 @@ const tableHeader=["Name","Price","Change","Market Cap","Trade"];
 
   return (
     <div className='coin-app'>
-    <table>
-        <thead>
-            <tr>
+    <table >
+        <thead >
+            <tr >
             {tableHeader.map(data=>{
                 {<th>{data}</th>}
             })}

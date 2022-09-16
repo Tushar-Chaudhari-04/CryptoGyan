@@ -3,7 +3,7 @@ import '../css/Coin.css'
 
 const Coin = ({image,symbol,name,price,volume,pricechange,marketcap}) => {
     return (
-        <tr className="coin-container">
+        <tr className="coin-container ">
             <div className="coin-row">
                 <div className="coin">
                     <td><img src={image} alt="crypto" /></td>
