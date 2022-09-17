@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 // import {useHistory} from 'react-router-dom';
 import axios from 'axios';
 import "../css/SignUp.css";
@@ -6,15 +6,19 @@ import signupImage from "../images/signup-sideImage.PNG";
 import faArrowAltCircleLeft from "@fortawesome/free-regular-svg-icons";
 import leftArrow from "../images/left arrow.PNG";
 import redirectHome from "../images/redirectHome.PNG";
+import { useNavigate } from "react-router-dom";
+
 import {
     BrowserRouter as Router,
     Switch,
     Route,
     Link
   } from "react-router-dom";
+import Spinner from '../components/Spinner';
 
 const SignUp = () => {
    // const history=useHistory();
+    const navigate = useNavigate();
     const url="http://localhost:3000/crypto/auth/register"
     const [data,setData]=useState({
         firstName:"",
@@ -23,7 +27,7 @@ const SignUp = () => {
         password:""
     });
     
-    const [valid,setValid]=useState(true);
+    const [valid,setValid]=useState(false);
     let name,value;
     
 
@@ -35,10 +39,6 @@ const SignUp = () => {
         setData({
             ...data,[name]:value
         });
-        // const newData=[...data];
-        // newData[e.target.id]=e.target.value;
-        // setData(newData);
-        // console.log(data);
     }
 
     const submitData=(e)=>{
@@ -51,12 +51,17 @@ const SignUp = () => {
             password:data.password
         }).then(res=>{
             console.log(res);
-            if(res.request.status===201){
-                console.log("User Register Successfully");
-                setValid(true);
-               
-                //history.push("/login");
-            }
+            if(res.request.status===201){          
+                alert("User Register Successfully");
+                navigate("/spinner")
+                
+               setTimeout(() => {
+                        navigate("/login");
+                }, 3000);
+                
+                } else{
+                    navigate("/register")
+                }
         }).catch(err=>{
             console.log(err);
         })
@@ -83,52 +88,66 @@ const SignUp = () => {
     <div className="signup">
     <h3 className="signup-heading"> <span><img className="leftArrowImage" src={leftArrow} alt="left-arrow"/>Create an account</span></h3>
     <p>Required fields have an asterisk: *</p>
-    <form style={SignUpStyle} method="POST">
+    <form class="was-validated mb-3" style={SignUpStyle} method="POST" novalidate>
         <div className="row">
             <div className="col-md-6">
-                <label htmlFor="firstName">First name*</label>
+                <label for="firstName">First name*</label>
                 <input   type="text"  className="form-control" id="firstName" placeholder="First Name" autoComplete='off'
-                 value={data.firstName} onChange={handleData} 
+                 value={data.firstName} onChange={handleData} requried
                 />
+                <div class="invalid-feedback">
+                      Please Enter First Name.
+                </div>
             </div>
 
             <div className="col-md-6">
-                <label htmlFor="lastName">Last name*</label>
+                <label for="lastName">Last name*</label>
                 <input type="text" className="form-control" id="lastName" placeholder="Last Name" autoComplete='off'
-                    value={data.lastName} onChange={handleData} 
+                    value={data.lastName} onChange={handleData} requried
                 />
+
+                <div class="invalid-feedback">
+                      Please Enter Last Name.
+                </div>
             </div>
 
             <div>
-                <label htmlFor="email">Email*</label>
+                <label for="email">Email*</label>
                 <input  type="email" className="form-control" id="email" placeholder="Email" autoComplete='off'
-                    value={data.email} onChange={handleData} 
+                    value={data.email} onChange={handleData} requried
                 />
+                <div class="invalid-feedback">
+                      Please Enter Email.
+                </div>
             </div>
 
             <div>
-                <label htmlFor="password">Password*</label>
+                <label for="password">Password*</label>
                 <input type="password" className="form-control" id="password" placeholder="Minimum 8 Characters" autoComplete='off'
-                    value={data.password} onChange={handleData} 
+                    value={data.password} onChange={handleData} requried
                 />
+                 <div class="invalid-feedback">
+                      Please Enter Password.
+                </div>
             </div>
 
             <div class="col-md-12">
                 <div class="form-check">
-                    {/* <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required /> */}
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required />
                     <span>
                         I certify that I am 18 years of age or older, I agree to the <a className="user-agreement">User Agreement</a>, and I have read the <a className="user-agreement">Privacy Policy</a>.
                     </span>
-                    {/* <label class="form-check-label" htmlFor="invalidCheck">
+                    <label class="form-check-label" htmlFor="invalidCheck">
                         Agree to terms and conditions
-                    </label> */}
+                    </label>
                     <div class="invalid-feedback">
                         You must agree before submitting.
                     </div>
                 </div>
             </div>
         </div>
-        <Link to={valid?"/login":"/register"}><button type="button" className="btn btn-primary btn-lg signup-btn" onClick={submitData}>Create a free Account</button></Link>
+       <button type="button" className="btn btn-primary btn-lg signup-btn" onClick={submitData}>Create a free Account</button>
+      
         <p className="signup-lastpara"><a className="user-agreement">Sign up</a> for a business account</p>
     </form>
     </div>

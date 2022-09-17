@@ -1,0 +1,14 @@
+.spin{
+    align-items:center;
+    justify-content:center;
+    height:120px;
+    width:120px;
+    text-align:center;
+
+    position: absolute;
+    left: 45%;
+    top: 28%;
+    /* transform: translate(50%); */
+    /* border: 5px solid #FFFF00; */
+    padding: 10px;
+}

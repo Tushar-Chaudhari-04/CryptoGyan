@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/static/css/main.81f524e2.css",
+    "main.js": "/static/js/main.35720425.js",
+    "static/js/787.3b50bc8c.chunk.js": "/static/js/787.3b50bc8c.chunk.js",
+    "static/media/portfolio.PNG": "/static/media/portfolio.723d3f32274defcb372b.PNG",
+    "static/media/Mobile Image.PNG": "/static/media/Mobile Image.29bb3a33bae450d81982.PNG",
+    "static/media/mobile2.PNG": "/static/media/mobile2.85dcfcbceebabb0c9edc.PNG",
+    "static/media/bitcoin.png": "/static/media/bitcoin.e146d46fb598ae0d8f43.png",
+    "static/media/signup-sideImage.PNG": "/static/media/signup-sideImage.6f29f961d612577bc8fa.PNG",
+    "static/media/mobile-portfolio.PNG": "/static/media/mobile-portfolio.e2a284b53921c589c14a.PNG",
+    "static/media/industryPractice.PNG": "/static/media/industryPractice.a348187857784f7d4a08.PNG",
+    "static/media/storage.PNG": "/static/media/storage.a399c1cc4e30ae807568.PNG",
+    "static/media/bestPractice.PNG": "/static/media/bestPractice.e8081c607177639c0ac1.PNG",
+    "static/media/manage-portfolio.PNG": "/static/media/manage-portfolio.6eba5ba890c79835a27b.PNG",
+    "static/media/vault-portfolio.PNG": "/static/media/vault-portfolio.c67eb76c84f72b0cdabd.PNG",
+    "static/media/bank.PNG": "/static/media/bank.dac487692178c4fbe23f.PNG",
+    "index.html": "/index.html",
+    "static/media/account.PNG": "/static/media/account.b0eb7019fc9b556aff60.PNG",
+    "static/media/b&s.PNG": "/static/media/b&s.155842d421d4f846fe49.PNG",
+    "static/media/left arrow.PNG": "/static/media/left arrow.8a913574630c64fe62e9.PNG",
+    "static/media/redirectHome.PNG": "/static/media/redirectHome.cdf6cacd2e6abfe4a564.PNG",
+    "main.81f524e2.css.map": "/static/css/main.81f524e2.css.map",
+    "main.35720425.js.map": "/static/js/main.35720425.js.map",
+    "787.3b50bc8c.chunk.js.map": "/static/js/787.3b50bc8c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.81f524e2.css",
+    "static/js/main.35720425.js"
+  ]
+}

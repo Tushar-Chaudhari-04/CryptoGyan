@@ -15,6 +15,7 @@ import {
   Routes,
   Navigate
 } from "react-router-dom";
+import Spinner from './components/Spinner';
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
             <Route exact path="/" element={<Home mode={mode} onSlide={onSlide}/>}/>
             <Route path="/register" element={user?<Navigate to="/"/>:<SignUp/>}/> 
             <Route path="/login" element={user?<Navigate to="/"/>:<Signin/>}/>
+            <Route path="/spinner" element={<Spinner/>}/>
             {/* <Route path="/products/:category" element={</>}/>
             <Route path="/product/:id" element={<SpecificProduct/>}/>
             <Route path="/cart" element={<Cart/>}/>
